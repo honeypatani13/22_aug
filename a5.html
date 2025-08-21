@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Slideshow</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      gap: 20px;
+      animation: scroll 40s linear infinite;
+    }
+
+    .slider img {
+      height: 570px;
+      width: auto;
+      border-radius: 10px;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    audio {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      
+    }
+  </style>
+</head>
+
+<body>
+  <audio controls autoplay loop>
+    <source src="With You Ap Dhillon 320 Kbps.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="slider">
+    <img src="9824.jpg" alt="">
+    <img src="band.jpg" alt="">
+    <img src="first.jpg" alt="">
+    <img src="firststory.jpg" alt="">
+    <img src="firsttalk.jpg" alt="">
+    <img src="handfeed.jpg" alt="">
+    <img src="happiest.jpg" alt="">
+    <img src="hubby.jpg" alt="">
+    <img src="IMG-20250815-WA0040.jpg" alt="">
+    <img src="lobe.jpg" alt="">
+    <img src="mangi.jpg" alt="">
+    <img src="momodate.jpg" alt="">
+    <img src="ninicall.jpg" alt="">
+    <img src="periods.jpg" alt="">
+  </div>
+</body>
+
+</html>

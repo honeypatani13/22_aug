@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Balloon Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>body {
+    background: linear-gradient(#a1c4fd, #c2e9fb);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Balloon container */
+.balloon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Heart shape */
+.heart {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: red;
+    transform: rotate(-45deg);
+    animation: pulse 1.5s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -40px;
+    left: 0;
+}
+
+.heart::after {
+    left: 40px;
+    top: 0;
+}
+
+/* String */
+.string {
+    width: 2px;
+    height: 100px;
+    background: #555;
+    margin-top: -20px;
+}
+
+/* Floating animation */
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-40px) rotate(3deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Heart beating animation */
+@keyframes pulse {
+    0% { transform: rotate(-45deg) scale(1); }
+    50% { transform: rotate(-45deg) scale(1.1); }
+    100% { transform: rotate(-45deg) scale(1); }
+}
+</style>
+<body>
+
+<div class="balloon">
+    <div class="heart"></div>
+    <div class="string"></div>
+</div>
+
+</body>
+</html>

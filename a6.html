@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Memories</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      font-family: "Poppins", sans-serif;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      color: white;
+      font-size: 3rem;
+      text-shadow: 0 0 20px #ff0077, 0 0 40px #ff0077;
+      margin-bottom:20px;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff0077, 0 0 20px #ff0077; }
+      to { text-shadow: 0 0 30px #ff00ff, 0 0 60px #ff00ff; }
+    }
+
+    .slider, .slider2 {
+      display: flex;
+      gap: 20px;
+    }
+
+    .slider {
+      animation: scroll 40s linear infinite;
+    }
+
+    .slider:hover {
+      animation-duration: 15s; /* Speed up on hover */
+    }
+
+    .slider2 {
+      animation: scrollReverse 50s linear infinite;
+      margin-top: 30px;
+    }
+
+    .slider img, .slider2 img {
+      width: 220px;       /* fixed width */
+      height: 300px;      /* fixed height */
+      object-fit: cover;  /* crop nicely without stretching */
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .slider img:hover, .slider2 img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px #fff, 0 0 50px #ff0077;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    @keyframes scrollReverse {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    audio {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #ff0077;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>✨Our Beautiful Memories ✨</h1>
+    <!-- Music -->
+  <audio controls autoplay loop>
+    <source src="With You Ap Dhillon 320 Kbps.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- First row -->
+  <div class="slider">
+    <img src="9824.jpg" alt="">
+    <img src="band.jpg" alt="">
+    <img src="first.jpg" alt="">
+    <img src="firststory.jpg" alt="">
+    <img src="firsttalk.jpg" alt="">
+    <img src="handfeed.jpg" alt="">
+    <img src="happiest.jpg" alt="">
+    <img src="hubby.jpg" alt="">
+    <img src="IMG-20250815-WA0040.jpg" alt="">
+    <img src="lobe.jpg" alt="">
+    <img src="mangi.jpg" alt="">
+    <img src="momodate.jpg" alt="">
+    <img src="ninicall.jpg" alt="">
+    <img src="periods.jpg" alt="">
+    
+  </div>
+
+  <!-- Second row (reverse direction) -->
+  <div class="slider2">
+    <img src="9824.jpg" alt="">
+    <img src="band.jpg" alt="">
+    <img src="first.jpg" alt="">
+    <img src="firststory.jpg" alt="">
+    <img src="firsttalk.jpg" alt="">
+    <img src="handfeed.jpg" alt="">
+    <img src="happiest.jpg" alt="">
+    <img src="hubby.jpg" alt="">
+    <img src="IMG-20250815-WA0040.jpg" alt="">
+    <img src="lobe.jpg" alt="">
+    <img src="mangi.jpg" alt="">
+    <img src="momodate.jpg" alt="">
+    <img src="ninicall.jpg" alt="">
+    <img src="periods.jpg" alt="">
+    <img src="eyes.jpg" alt="">
+    <img src="micro.jpg" alt="">
+    <img src="skecher.jpg" alt="">
+  </div>
+
+</body>
+</html>
